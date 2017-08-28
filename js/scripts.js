@@ -3,9 +3,14 @@
 
 //user interface
 $(document).ready(function(){
-  $("#options").submit(function(event) {
+  $("#questions").submit(function(event) {
     event.preventDefault();
-    var pettype = $("#selectid").val();
-    alert(pettype);
+    var seasons = $("#seasons").val();
+    var costs = $("#costs").val();
+    var environment = $("#environment").val();
+    var history = $("#history").val();
+    var crowds = $("#crowds").val();
+
+    $('#mexico').show();
   });
 });

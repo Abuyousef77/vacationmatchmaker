@@ -12,18 +12,60 @@
     <h1>Find your dream vacation</h1>
   <form id="questions">
     <label for="seasons">What season do you want to travel?</label>
-    <select name="seasons">
-     <option value="Summer">Summer</option>
-     <option value="Spring">Spring</option>
-     <option value="Fall">Fall</option>
-     <option value="Winter">Winter</option>
+    <select id="seasons" name="seasons">
+      <option value="Default">-</option>
+      <option value="Summer">Summer</option>
+      <option value="Spring">Spring</option>
+      <option value="Fall">Fall</option>
+      <option value="Winter">Winter</option>
    </select>
+     <br>
      <label for="costs">How much can you spend?</label>
-     <select name="costs">
+     <select id="costs" name="costs">
+      <option value="Default">-</option>
       <option value="Budget">Budget</option>
       <option value="Average">Average</option>
       <option value="Splurge">Splurge</option>
-    </select>ß
+    </select>
+      <br>
+    <label for="environment">What do you prefer?</label>
+    <select id="environment" name="environment">
+      <option value="Default">-</option>
+      <option value="City">City</option>
+      <option value="Nature">Nature</option>
+      <option value="mix">A good mix</option>
+   </select>
+     <br>
+   <label for="history">What do you prefer?</label>
+   <select id="history" name="history">
+      <option value="Default">-</option>
+      <option value="Historic">Historic</option>
+      <option value="Modern">Modern</option>
+  </select>
+    <br>
+  <label for="crowds">What do you mind crowds?</label>
+  <select id="crowds" name="crowds">
+    <option value="Default">-</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+    <br>
+    <button type="submit" id="findvacation">Find my vacation!</button>
     </form>
+    <div id="mexico">
+      <p>You're going to Mexico!</p>
+    </div>
+    <div id="india">
+      <p>You're going to India!</p>
+    </div>
+    <div id="italy">
+      <p>You're going to Italy!</p>
+    </div>
+    <div id="egypt">
+      <p>You're going to Egypt!</p>
+    </div>
+    <div id="iceland">
+      <p>You're going to Iceland!</p>
+    </div>
   </body>
 </html>
