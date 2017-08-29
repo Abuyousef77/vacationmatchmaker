@@ -9,67 +9,79 @@
     <title>Find your perfect vacation</title>
   </head>
   <body>
-    <div class="image">
-      <img src="img/header.jpg">
-      <h1>Find your dream vacation</h1>
-    </div>
-  <form id="questions">
-    <input type="radio" for="seasons">What season do you want to travel?</label>
-    <select id="seasons" name="seasons">
-      <option value="Default">-</option>
-      <option value="Summer">Summer</option>
-      <option value="Spring">Spring</option>
-      <option value="Fall">Fall</option>
-      <option value="Winter">Winter</option>
-   </select>
-     <br>
-     <label for="costs">How much can you spend?</label>
-     <select id="costs" name="costs">
-      <option value="Default">-</option>
-      <option value="Budget">Budget</option>
-      <option value="Average">Average</option>
-      <option value="Splurge">Splurge</option>
-    </select>
+    <img id="#header" src="img/header.jpg">
+    <h1>Find your dream vacation</h1>
+    <form id="questions">
+      <label for="seasons">What season do you want to travel?</label>
+        <input type="radio" id="summer" name="season">
+      <label for="summer">Summer</label>
+        <input type="radio" id="fall" name="season">
+      <label for="fall">Fall</label>
+        <input type="radio" id="winter" name="season">
+      <label for="winter">Winter</label>
+        <input type="radio" id="spring" name="season">
+      <label for="summer">Spring</label>
       <br>
-    <label for="environment">What do you prefer?</label>
-    <select id="environment" name="environment">
-      <option value="Default">-</option>
-      <option value="City">City</option>
-      <option value="Nature">Nature</option>
-      <option value="mix">A good mix</option>
-   </select>
-     <br>
-   <label for="history">What do you prefer?</label>
-   <select id="history" name="history">
-      <option value="Default">-</option>
-      <option value="Historic">Historic</option>
-      <option value="Modern">Modern</option>
-  </select>
-    <br>
-  <label for="crowds">How do you feel about crowds?</label>
-  <select id="crowds" name="crowds">
-    <option value="Default">-</option>
-    <option value="Indifferent">Indifferent</option>
-    <option value="Hate-them">Hate them</option>
-    <option value="Like-them">Like them</option>
-  </select>
+      <label for="costs">How much can you spend?</label>
+        <input type="radio" id="budget" name="money">
+      <label for="budget">Budget</label>
+        <input type="radio" id="" name="money">
+      <label for="average">Average</label>
+        <input type="radio" id="splurge" name="money">
+      <label for="splurge">Splurge</label>
+      <br>
+      <label for="city-or-nature">What do you prefer?</label>
+        <input type="radio" id="prefer" name="city">
+      <label for="city">City</label>
+        <input type="radio" id="prefer" name="city">
+      <label for="nature">Nature</label>
+        <input type="radio" id="prefer" name="city">
+      <label for="mix">A good mix</label>
+      <br>
+      <label for="history">What do you prefer?</label>
+        <input type="radio" id="historic" name="modern">
+      <label for="summer">Historic</label>
+        <input type="radio" id="modern" name="modern">
+      <label for="summer">Modern</label>
+      <br>
+      <label for="crowds">How do you feel about crowds?</label>
+        <input type="radio" id="indiferent" name="crowds">
+      <label for="indifferent">Indifferent</label>
+        <input type="radio" id="hatethem" name="crowds">
+      <label for="hatethem">Hate them</label>
+        <input type="radio" id="likethem" name="crowds">
+      <label for="likethem">Like them</label>
     <br>
     <button type="submit" id="findvacation">Find my vacation!</button>
     </form>
     <div id="mexico">
-      <p>You're going to Mexico!</p>
+      <p>You're going to Mexico! A country nestled just south of the United States.
+      It is a nation that can't be missed! With an average population density,
+    reasonables prices and an extensive list of historic sights, you will be saying "Órale"
+   in no time. </p>
     </div>
     <div id="india">
-      <p>You're going to India!</p>
+      <p>You're going to India! Not commonly known as "low-key" you will quickly grow accustomed
+      to the crowds when you learn the value of one dollar, 60+ rupees. With the largest number
+      of wild tigers in the world and cities over 4,000 years old, you won't be bored with what
+      this subcontinent has to offer.</p>
     </div>
     <div id="singapore">
-      <p>You're going to Singapore!</p>
+      <p>You're going to Singapore! A tiny country, comprised of entirely urban space. It is one
+      of most densely populated places in the world and also one of the richest. Taking a river cruise
+      comes highly recommended. The best view of this modern city can be seen from the water!</p>
     </div>
     <div id="egypt">
-      <p>You're going to Egypt!</p>
+      <p>You're going to Egypt! Follow the footsteps of Cleopatra and experience the impressive
+      remains of the ancient Eygptians. Since Egypt's arab spring in 2011 the once booming tourism has industry has been
+      reduced to small trickle, leaving you to explore the pyramids all by yourself. You will be delighted
+      to see what your dollar can do in this part of Africa.</p>
     </div>
     <div id="iceland">
-      <p>You're going to Iceland!</p>
+      <p>You're going to Iceland! A suprisingly green country, remotely located away from the
+      hustle and bustle of the modern world. The prices might break the bank but will make up
+      for it with it's peaceful tranquility. With a tiny population and ample opportunities
+      for eco tourism, you will not be disappointed with your nordic adventure.</p>
     </div>
   </body>
 </html>
