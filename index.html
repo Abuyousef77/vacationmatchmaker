@@ -13,71 +13,75 @@
     <h1>Find your dream vacation</h1>
     <form id="questions">
       <label for="seasons">What season do you want to travel?</label>
-        <input type="radio" id="summer" name="season">
+        <input type="radio" value="summer" name="season">
       <label for="summer">Summer</label>
-        <input type="radio" id="fall" name="season">
+        <input type="radio" value="fall" name="season">
       <label for="fall">Fall</label>
-        <input type="radio" id="winter" name="season">
+        <input type="radio" value="winter" name="season">
       <label for="winter">Winter</label>
-        <input type="radio" id="spring" name="season">
+        <input type="radio" value="spring" name="season">
       <label for="summer">Spring</label>
       <br>
       <label for="costs">How much can you spend?</label>
-        <input type="radio" id="budget" name="money">
+        <input type="radio" value="budget" name="money">
       <label for="budget">Budget</label>
-        <input type="radio" id="" name="money">
+        <input type="radio" value="" name="money">
       <label for="average">Average</label>
-        <input type="radio" id="splurge" name="money">
+        <input type="radio" value="splurge" name="money">
       <label for="splurge">Splurge</label>
       <br>
       <label for="city-or-nature">What do you prefer?</label>
-        <input type="radio" id="prefer" name="city">
+        <input type="radio" value="prefer" name="city">
       <label for="city">City</label>
-        <input type="radio" id="prefer" name="city">
+        <input type="radio" value="prefer" name="city">
       <label for="nature">Nature</label>
-        <input type="radio" id="prefer" name="city">
+        <input type="radio" value="prefer" name="city">
       <label for="mix">A good mix</label>
       <br>
       <label for="history">What do you prefer?</label>
-        <input type="radio" id="historic" name="modern">
+        <input type="radio" value="historic" name="modern">
       <label for="summer">Historic</label>
-        <input type="radio" id="modern" name="modern">
+        <input type="radio" value="modern" name="modern">
       <label for="summer">Modern</label>
       <br>
       <label for="crowds">How do you feel about crowds?</label>
-        <input type="radio" id="indiferent" name="crowds">
+        <input type="radio" value="indiferent" name="crowds">
       <label for="indifferent">Indifferent</label>
-        <input type="radio" id="hatethem" name="crowds">
+        <input type="radio" value="hatethem" name="crowds">
       <label for="hatethem">Hate them</label>
-        <input type="radio" id="likethem" name="crowds">
+        <input type="radio" value="likethem" name="crowds">
       <label for="likethem">Like them</label>
     <br>
-    <button type="submit" id="findvacation">Find my vacation!</button>
+    <button type="submit">Find my vacation!</button>
     </form>
-    <div id="mexico">
+    <div>
+      <ul id="vacationresults">
+      </ul>
+    </div>
+    <div id="mexicoDiv">
       <p>You're going to Mexico! A country nestled just south of the United States.
       It is a nation that can't be missed! With an average population density,
     reasonables prices and an extensive list of historic sights, you will be saying "Órale"
    in no time. </p>
     </div>
-    <div id="india">
+    <div id="indiaDiv">
       <p>You're going to India! Not commonly known as "low-key" you will quickly grow accustomed
       to the crowds when you learn the value of one dollar, 60+ rupees. With the largest number
       of wild tigers in the world and cities over 4,000 years old, you won't be bored with what
       this subcontinent has to offer.</p>
     </div>
-    <div id="singapore">
+    <div id="singaporeDiv">
       <p>You're going to Singapore! A tiny country, comprised of entirely urban space. It is one
       of most densely populated places in the world and also one of the richest. Taking a river cruise
       comes highly recommended. The best view of this modern city can be seen from the water!</p>
     </div>
-    <div id="egypt">
+    <div id="egyptDiv">
       <p>You're going to Egypt! Follow the footsteps of Cleopatra and experience the impressive
       remains of the ancient Eygptians. Since Egypt's arab spring in 2011 the once booming tourism has industry has been
       reduced to small trickle, leaving you to explore the pyramids all by yourself. You will be delighted
       to see what your dollar can do in this part of Africa.</p>
     </div>
-    <div id="iceland">
+    <div id="icelandDiv">
       <p>You're going to Iceland! A suprisingly green country, remotely located away from the
       hustle and bustle of the modern world. The prices might break the bank but will make up
       for it with it's peaceful tranquility. With a tiny population and ample opportunities
