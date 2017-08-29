@@ -1,9 +1,9 @@
 //business interface
-var iceland = [];
-var india = [];
-var mexico = [];
-var singapore = [];
-var egypt = [];
+var iceland = 0;
+var india = 0;
+var mexico = 0;
+var singapore = 0;
+var egypt = 0;
 
 //objects
 function Country (season, cost, environment, history, crowd){
@@ -24,52 +24,52 @@ var countries = [
 
 Country.prototype.vacationmatch = function () {
   if (this.season === "summer") {
-    iceland.push(1);
+    iceland += 1;
   } else if (this.season === "winter") {
-    india.push(1);
-    egypt.push(1);
+    india += 1;
+    egypt += 1;
   } else if (this.season === "fall") {
-    mexico.push(1);
+    mexico += 1;
   } else if (this.season === "spring") {
-    singapore.push(1);
+    singapore += 1;
   }
 
   if (this.cost === "splurge") {
-    iceland.push(1);
-    singapore.push(1);
+    iceland += 1;
+    singapore += 1;
   } else if (this.season === "budget") {
-    india.push(1);
-    egypt.push(1);
+    india += 1;
+    egypt += 1;
   } else if (this.season === "average") {
-    mexico.push(1);
+    mexico += 1;
   }
 
   if (this.environment === "nature") {
-    iceland.push(1);
+    iceland += 1;
   } else if (this.environment === "mix") {
-    india.push(1);
-    mexico.push(1);
+    india += 1;
+    mexico += 1;
   } else if (this.environment === "city") {
-    egypt.push(1);
-    singapore.push(1);
+    egypt += 1;
+    singapore += 1;
   }
 
   if (this.history === "modern") {
-    iceland.push(1);
-    singapore.push(1);
+    iceland += 1;
+    singapore += 1;
   } else if (this.history === "historic") {
-    india.push(1);
-    mexico.push(1);
-    egypt.push(1);
+    india += 1;
+    mexico += 1;
+    egypt += 1;
   }
 
   if (this.crowd === "hate-them"){
-    iceland.push(1);
+    iceland += 1;
   } else if (this.crowd === "indifferent") {
-    mexico.push(1);
-    egypt.push(1);
+    mexico += 1;
+    egypt += 1;
   } else if (this.crowd === "like-them") {
-    india.push(1);
+    india += 1;
   }
   alert("Iceland is" + iceland);
   alert("India is" + india);
