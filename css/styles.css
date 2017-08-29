@@ -22,15 +22,22 @@ body {
   display: none;
 }
 
-img {
+#topimg{
+  width: 100%;
+  position: relative;
+  height: 420px;
+}
+
+/*img {
   width: 100%;
   height: 400px;
   position: relative;
-}
+}*/
 
-h1 {
+.text {
   position: absolute;
-  top: 40px;
+  text-align: center;
+  top: 3px;
   left: 0;
   font-size: 150px;
   color: #e6cac1;
@@ -39,4 +46,12 @@ h1 {
 
 body {
   background-color: #fff0f8;
+}
+
+.samesize {
+  height: 200px;
+}
+
+#widen {
+  width: 220px;
 }
