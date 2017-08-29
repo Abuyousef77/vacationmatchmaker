@@ -23,15 +23,26 @@ var countries = [
 ];
 
 Country.prototype.vacationmatch = function () {
+  var icelandText = "You're going to Iceland!";
+  var indiaText = "You're going to India!";
+  var mexicoText = "You're going to Mexico";
+  var singaporeText = "You're going to Singapore!";
+  var egyptText = "You're going to Egypt!";
+
   if (this.season === "summer") {
     iceland += 1;
+    // return icelandText;
   } else if (this.season === "winter") {
     india += 1;
+    // return indiaText;
     egypt += 1;
+    // return egyptText;
   } else if (this.season === "fall") {
     mexico += 1;
+    // return mexicoText;
   } else if (this.season === "spring") {
     singapore += 1;
+    // return singaporeText;
   }
 
   if (this.cost === "splurge") {
@@ -71,11 +82,28 @@ Country.prototype.vacationmatch = function () {
   } else if (this.crowd === "like-them") {
     india += 1;
   }
-  alert("Iceland is" + iceland);
-  alert("India is" + india);
-  alert("Egypt is" + egypt);
-  alert("Mexico is" + mexico);
-  alert("Singapore is" + singapore);
+  console.log("Iceland is" + iceland);
+  console.log("India is" + india);
+  console.log("Egypt is" + egypt);
+  console.log("Mexico is" + mexico);
+  console.log("Singapore is" + singapore);
+
+  var allCountries = [iceland, singapore, india, mexico, egypt];
+  console.log(allCountries);
+  var highScore = Math.max(parseInt(allCountries));
+  console.log("high score is" + highScore);
+
+  if (highScore === iceland) {
+    return icelandText;
+  } else if (highScore === singapore) {
+    return singaporeText;
+  } else if (highScore === india) {
+    return indiaText;
+  } else if (highScore === mexico) {
+    return mexicoText;
+  } else if (highScore === egypt) {
+    return egyptText;
+  }
 };
 
 //user interface
@@ -90,6 +118,7 @@ $(document).ready(function(){
 
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
-    myCountry.vacationmatch();
+    // myCountry.vacationmatch();
+    $("#userOutput").text(myCountry.vacationmatch());
   });
 });
