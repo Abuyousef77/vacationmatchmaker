@@ -4,6 +4,7 @@ var india = 0;
 var mexico = 0;
 var singapore = 0;
 var egypt = 0;
+var yourResults = [];
 
 //objects
 function Country (season, cost, environment, history, crowd){
@@ -32,18 +33,13 @@ Country.prototype.vacationmatch = function () {
 
   if (this.season === "summer") {
     iceland += 1;
-    // return icelandText;
   } else if (this.season === "winter") {
     india += 1;
-    // return indiaText;
     egypt += 1;
-    // return egyptText;
   } else if (this.season === "fall") {
     mexico += 1;
-    // return mexicoText;
   } else if (this.season === "spring") {
     singapore += 1;
-    // return singaporeText;
   }
 
   if (this.cost === "splurge") {
@@ -91,22 +87,27 @@ Country.prototype.vacationmatch = function () {
   console.log("Singapore is" + singapore);
 
   allCountries.push(iceland, india, egypt, mexico, singapore);
-  // var splitCountries = allCountries.split(',');
   console.log(allCountries);
   var highScore = Math.max.apply(null, allCountries);
   console.log("high score is" + highScore);
 
+
   if (highScore === iceland) {
-    return icelandText;
-  } else if (highScore === singapore) {
-    return singaporeText;
-  } else if (highScore === india) {
-    return indiaText;
-  } else if (highScore === mexico) {
-    return mexicoText;
-  } else if (highScore === egypt) {
-    return egyptText;
+    yourResults.push(icelandText);
   }
+  if (highScore === singapore) {
+    yourResults.push(singaporeText);
+  }
+  if (highScore === india) {
+    yourResults.push(indiaText);
+  }
+  if (highScore === mexico) {
+    yourResults.push(mexicoText);
+  }
+  if (highScore === egypt) {
+    yourResults.push(egyptText);
+  }
+  console.log("your results are" + yourResults);
 };
 
 //user interface
@@ -121,7 +122,9 @@ $(document).ready(function(){
 
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
-    // myCountry.vacationmatch();
-    $("#userOutput").text(myCountry.vacationmatch());
+    myCountry.vacationmatch();
+    for (var i=0; i <= yourResults.length; i++) {
+      $("#vacationresults").append("<li>" + [i] + "</li>");
+    };
   });
 });
