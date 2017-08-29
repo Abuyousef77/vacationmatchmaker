@@ -123,8 +123,8 @@ $(document).ready(function(){
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
     myCountry.vacationmatch();
-    for (var i=0; i <= yourResults.length; i++) {
-      $("#vacationresults").append("<li>" + [i] + "</li>");
+    for (var i=0; i < yourResults.length; i++) {
+      $("#vacationresults").append("<li>" + yourResults[i] + "</li>");
     };
   });
 });
