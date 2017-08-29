@@ -28,6 +28,7 @@ Country.prototype.vacationmatch = function () {
   var mexicoText = "You're going to Mexico";
   var singaporeText = "You're going to Singapore!";
   var egyptText = "You're going to Egypt!";
+  var allCountries = [];
 
   if (this.season === "summer") {
     iceland += 1;
@@ -81,6 +82,7 @@ Country.prototype.vacationmatch = function () {
     egypt += 1;
   } else if (this.crowd === "like-them") {
     india += 1;
+    singapore += 1;
   }
   console.log("Iceland is" + iceland);
   console.log("India is" + india);
@@ -88,9 +90,10 @@ Country.prototype.vacationmatch = function () {
   console.log("Mexico is" + mexico);
   console.log("Singapore is" + singapore);
 
-  var allCountries = [iceland, singapore, india, mexico, egypt];
+  allCountries.push(iceland, india, egypt, mexico, singapore);
+  // var splitCountries = allCountries.split(',');
   console.log(allCountries);
-  var highScore = Math.max(parseInt(allCountries));
+  var highScore = Math.max.apply(null, allCountries);
   console.log("high score is" + highScore);
 
   if (highScore === iceland) {
