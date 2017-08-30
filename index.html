@@ -12,34 +12,34 @@
     <img src="img/header.jpg" id="topimg">
     <p class="text">Find your dream vacation</p>
     <div class="container">
-    <form id="questions">
-    <label for="first-name">Please enter your first name</label>
-    <input type="text" class="form-control" id="first-name">
-    <label for="seasons">What season do you want to travel?</label>
-      <div class="row">
-        <div class="col-md-3">
-          <img src="img/summer.jpg" class="samesize">
-          <input type="radio" value="summer" name="season">
-          <label for="summer">Summer</label>
+      <form id="questions">
+        <label for="first-name"><span class="label-text">Please enter your first name</span></label>
+        <input type="text" class="form-control" id="first-name">
+        <label for="seasons"><span class="label-text">What season do you want to travel?</span></label>
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/summer.jpg" class="samesize">
+            <input type="radio" value="summer" name="season">
+            <label for="summer">Summer</label>
+          </div>
+          <div class="col-md-3">
+            <img src="img/fall.jpg" class="samesize">
+            <input type="radio"value="fall" name="season">
+            <label for="fall">Fall</label>
+          </div>
+          <div class="col-md-3">
+            <img src="img/winter.jpg" class="samesize">
+            <input type="radio" value="winter" name="season">
+            <label for="winter">Winter</label>
+          </div>
+          <div class="col-md-3">
+            <img src="img/spring.jpg" class="samesize">
+            <input type="radio" value="spring" name="season">
+            <label for="spring">Spring</label>
+          </div>
         </div>
-        <div class="col-md-3">
-          <img src="img/fall.jpg" class="samesize">
-          <input type="radio"value="fall" name="season">
-          <label for="fall">Fall</label>
-        </div>
-        <div class="col-md-3">
-          <img src="img/winter.jpg" class="samesize">
-          <input type="radio" value="winter" name="season">
-          <label for="winter">Winter</label>
-        </div>
-        <div class="col-md-3">
-          <img src="img/spring.jpg" class="samesize">
-          <input type="radio" value="spring" name="season">
-          <label for="spring">Spring</label>
-        </div>
-      </div>
-      <br>
-      <label for="costs">How much can you spend?</label>
+        <br>
+        <label for="costs"><span class="label-text">How much can you spend?</span></label>
         <div class="row">
           <div class="col-md-4">
             <img src="img/1dollar.jpg" class="samesize">
@@ -60,101 +60,101 @@
           </div>
         </div>
         <br>
-        <label for="city-or-nature">What do you prefer?</label>
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/city.jpg" class="samesize">
-              <br>
-              <input type="radio" value="city" name="city">
-              <label for="city">City</label>
-            </div>
-            <div class="col-md-4">
-              <img src="img/nature.jpg" class="samesize">
-              <br>
-              <input type="radio" value="nature" name="city">
-              <label for="nature">Nature</label>
-            </div>
-            <div class="col-md-4">
-              <img src="img/agoodmix.jpg" class="samesize">
-              <br>
-              <input type="radio" value="mix" name="city">
-              <label for="mix">A good mix</label>
-            </div>
-          </div>
-          <br>
-          <label for="history">What do you prefer?</label>
-            <div class="row">
-              <div class="col-md-6">
-                <img src="img/historic.jpg" class="samesize" id="widen">
-                <br>
-                <input type="radio" value="historic" name="modern">
-                <label for="summer">Historic</label>
-              </div>
-              <div class="col-md-6">
-                <img src="img/modern.jpg" class="samesize">
-                <br>
-                <input type="radio" value="modern" name="modern">
-                <label for="summer">Modern</label>
-              </div>
-            </div>
+        <label for="city-or-nature"><span class="label-text">What do you prefer?</span></label>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="img/city.jpg" class="samesize">
             <br>
-            <label for="crowds">How do you feel about crowds?</label>
-              <div class="row">
-                <div class="col-md-4">
-                  <img src="img/indifferent.jpeg" class="samesize">
-                  <br>
-                  <input type="radio" value="indifferent" name="crowds">
-                  <label for="indifferent">Indifferent</label>
-                </div>
-                <div class="col-md-4">
-                  <img src="img/hatethem.jpg" class="samesize">
-                  <br>
-                  <input type="radio" value="hate-them" name="crowds">
-                  <label for="hatethem">Hate them</label>
-                </div>
-                <div class="col-md-4">
-                  <img src="img/likethem.jpeg" class="samesize">
-                  <br>
-                  <input type="radio" value="like-them" name="crowds">
-                  <label for="likethem">Like them</label>
-                </div>
-              </div>
-      <br>
-      <button type="submit" id="findvacation" class="btn btn-outline-success">Find my vacation!</button>
-    </form>
-    <div>
-      <ul id="vacationresults">
-      </ul>
-    </div>
-    <div id="mexicoDiv">
-      <p>You're going to Mexico! A country nestled just south of the United States.
-      It is a nation that can't be missed! With an average population density,
-    reasonables prices and an extensive list of historic sights, you will be saying "Órale"
-   in no time. </p>
-    </div>
-    <div id="indiaDiv">
-      <p>You're going to India! Not commonly known as "low-key" you will quickly grow accustomed
-      to the crowds when you learn the value of one dollar, 60+ rupees. With the largest number
-      of wild tigers in the world and cities over 4,000 years old, you won't be bored with what
-      this subcontinent has to offer.</p>
-    </div>
-    <div id="singaporeDiv">
-      <p>You're going to Singapore! A tiny country, comprised of entirely urban space. It is one
-      of most densely populated places in the world and also one of the richest. Taking a river cruise
-      comes highly recommended. The best view of this modern city can be seen from the water!</p>
-    </div>
-    <div id="egyptDiv">
-      <p>You're going to Egypt! Follow the footsteps of Cleopatra and experience the impressive
-      remains of the ancient Eygptians. Since Egypt's arab spring in 2011 the once booming tourism has industry has been
-      reduced to small trickle, leaving you to explore the pyramids all by yourself. You will be delighted
-      to see what your dollar can do in this part of Africa.</p>
-    </div>
-    <div id="icelandDiv">
-      <p>You're going to Iceland! A suprisingly green country, remotely located away from the
-      hustle and bustle of the modern world. The prices might break the bank but will make up
-      for it with it's peaceful tranquility. With a tiny population and ample opportunities
-      for eco tourism, you will not be disappointed with your nordic adventure.</p>
-    </div>
+            <input type="radio" value="city" name="city">
+            <label for="city">City</label>
+          </div>
+          <div class="col-md-4">
+            <img src="img/nature.jpg" class="samesize">
+            <br>
+            <input type="radio" value="nature" name="city">
+            <label for="nature">Nature</label>
+          </div>
+          <div class="col-md-4">
+            <img src="img/agoodmix.jpg" class="samesize">
+            <br>
+            <input type="radio" value="mix" name="city">
+            <label for="mix">A good mix</label>
+          </div>
+        </div>
+          <br>
+        <label for="history"><span class="label-text">What do you prefer?</span></label>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/historic.jpg" class="samesize" id="widen">
+            <br>
+            <input type="radio" value="historic" name="modern">
+            <label for="summer">Historic</label>
+          </div>
+          <div class="col-md-6">
+            <img src="img/modern.jpg" class="samesize">
+            <br>
+            <input type="radio" value="modern" name="modern">
+            <label for="summer">Modern</label>
+          </div>
+        </div>
+        <br>
+        <label for="crowds"><span class="label-text">How do you feel about crowds?<span></label>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="img/indifferent.jpeg" class="samesize">
+            <br>
+            <input type="radio" value="indifferent" name="crowds">
+            <label for="indifferent">Indifferent</label>
+          </div>
+          <div class="col-md-4">
+            <img src="img/hatethem.jpg" class="samesize">
+            <br>
+            <input type="radio" value="hate-them" name="crowds">
+            <label for="hatethem">Hate them</label>
+          </div>
+          <div class="col-md-4">
+            <img src="img/likethem.jpeg" class="samesize">
+            <br>
+            <input type="radio" value="like-them" name="crowds">
+            <label for="likethem">Like them</label>
+          </div>
+        </div>
+        <br>
+        <button type="submit" id="findvacation" class="btn btn-outline-success">Find my vacation!</button>
+      </form>
+      <div>
+        <ul id="vacationresults">
+        </ul>
+      </div>
+      <div id="mexicoDiv">
+        <p>We suggest visiting Mexico! A country nestled just south of the United States.
+        It is a nation that can't be missed! With an average population density,
+        reasonables prices and an extensive list of historic sights, you will be saying "Órale"
+        in no time. </p>
+      </div>
+      <div id="indiaDiv">
+        <p>We suggest visiting India! Not commonly known as "low-key" you will quickly grow accustomed
+        to the crowds when you learn the value of one dollar, 60+ rupees. With the largest number
+        of wild tigers in the world and cities over 4,000 years old, you won't be bored with what
+        this subcontinent has to offer.</p>
+      </div>
+      <div id="singaporeDiv">
+        <p>We suggest visiting Singapore! A tiny country, comprised of entirely urban space. It is one
+        of most densely populated places in the world and also one of the richest. Taking a river cruise
+        comes highly recommended. The best view of this modern city can be seen from the water!</p>
+      </div>
+      <div id="egyptDiv">
+        <p>We suggest visiting Egypt! Follow the footsteps of Cleopatra and experience the impressive
+        remains of the ancient Eygptians. Since Egypt's arab spring in 2011 the once booming tourism has industry has been
+        reduced to small trickle, leaving you to explore the pyramids all by yourself. You will be delighted
+        to see what your dollar can do in this part of Africa.</p>
+      </div>
+      <div id="icelandDiv">
+        <p>We suggest visiting Iceland! A suprisingly green country, remotely located away from the
+        hustle and bustle of the modern world. The prices might break the bank but will make up
+        for it with it's peaceful tranquility. With a tiny population and ample opportunities
+        for eco tourism, you will not be disappointed with your nordic adventure.</p>
+      </div>
     </div>
   </body>
 </html>
