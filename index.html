@@ -9,50 +9,106 @@
     <title>Find your perfect vacation</title>
   </head>
   <body>
-    <img id="#header" src="img/header.jpg">
-    <h1>Find your dream vacation</h1>
+    <img src="img/header.jpg" id="topimg">
+    <p class="text">Find your dream vacation</p>
+    <div class="container">
     <form id="questions">
-      <label for="seasons">What season do you want to travel?</label>
-        <input type="radio" value="summer" name="season">
-      <label for="summer">Summer</label>
-        <input type="radio" value="fall" name="season">
-      <label for="fall">Fall</label>
-        <input type="radio" value="winter" name="season">
-      <label for="winter">Winter</label>
-        <input type="radio" value="spring" name="season">
-      <label for="summer">Spring</label>
+    <label for="seasons">What season do you want to travel?</label>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="img/summer.jpg" class="samesize">
+          <input type="radio" id="summer" name="season">
+          <label for="summer">Summer</label>
+        </div>
+        <div class="col-md-3">
+          <img src="img/fall.jpg" class="samesize">
+          <input type="radio" id="fall" name="season">
+          <label for="fall">Fall</label>
+        </div>
+        <div class="col-md-3">
+          <img src="img/winter.jpg" class="samesize">
+          <input type="radio" id="winter" name="season">
+          <label for="winter">Winter</label>
+        </div>
+        <div class="col-md-3">
+          <img src="img/spring.jpg" class="samesize">
+          <input type="radio" id="spring" name="season">
+          <label for="summer">Spring</label>
+        </div>
+      </div>
       <br>
       <label for="costs">How much can you spend?</label>
-        <input type="radio" value="budget" name="money">
-      <label for="budget">Budget</label>
-        <input type="radio" value="" name="money">
-      <label for="average">Average</label>
-        <input type="radio" value="splurge" name="money">
-      <label for="splurge">Splurge</label>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="img/1dollar.jpg" class="samesize">
+            <input type="radio" id="budget" name="money">
+            <label for="budget">Budget</label>
+          </div>
+          <div class="col-md-4">
+            <img src="img/2dollar.png" class="samesize">
+            <input type="radio" id="" name="money">
+            <label for="average">Average</label>
+          </div>
+          <div class="col-md-4">
+            <img src="img/3dollars.jpg" class="samesize">
+            <input type="radio" id="splurge" name="money">
+            <label for="splurge">Splurge</label>
+          </div>
+        </div>
+        <br>
+        <label for="city-or-nature">What do you prefer?</label>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/city.jpg" class="samesize">
+              <input type="radio" id="prefer" name="city">
+              <label for="city">City</label>
+            </div>
+            <div class="col-md-4">
+              <img src="img/nature.jpg" class="samesize">
+              <input type="radio" id="prefer" name="city">
+              <label for="nature">Nature</label>
+            </div>
+            <div class="col-md-4">
+              <img src="img/agoodmix.jpg" class="samesize">
+              <input type="radio" id="prefer" name="city">
+              <label for="mix">A good mix</label>
+            </div>
+          </div>
+          <br>
+          <label for="history">What do you prefer?</label>
+            <div class="row">
+              <div class="col-md-6">
+                <img src="img/historic.jpg" class="samesize" id="widen">
+                <input type="radio" id="historic" name="modern">
+                <label for="summer">Historic</label>
+              </div>
+              <div class="col-md-6">
+                <img src="img/modern.jpg" class="samesize">
+                <input type="radio" id="modern" name="modern">
+                <label for="summer">Modern</label>
+              </div>
+            </div>
+            <br>
+            <label for="crowds">How do you feel about crowds?</label>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="img/indifferent.jpeg" class="samesize">
+                  <input type="radio" id="indiferent" name="crowds">
+                  <label for="indifferent">Indifferent</label>
+                </div>
+                <div class="col-md-4">
+                  <img src="img/hatethem.jpg" class="samesize">
+                  <input type="radio" id="hatethem" name="crowds">
+                  <label for="hatethem">Hate them</label>
+                </div>
+                <div class="col-md-4">
+                  <img src="img/likethem.jpeg" class="samesize">
+                  <input type="radio" id="likethem" name="crowds">
+                  <label for="likethem">Like them</label>
+                </div>
+              </div>
       <br>
-      <label for="city-or-nature">What do you prefer?</label>
-        <input type="radio" value="prefer" name="city">
-      <label for="city">City</label>
-        <input type="radio" value="prefer" name="city">
-      <label for="nature">Nature</label>
-        <input type="radio" value="prefer" name="city">
-      <label for="mix">A good mix</label>
-      <br>
-      <label for="history">What do you prefer?</label>
-        <input type="radio" value="historic" name="modern">
-      <label for="summer">Historic</label>
-        <input type="radio" value="modern" name="modern">
-      <label for="summer">Modern</label>
-      <br>
-      <label for="crowds">How do you feel about crowds?</label>
-        <input type="radio" value="indiferent" name="crowds">
-      <label for="indifferent">Indifferent</label>
-        <input type="radio" value="hatethem" name="crowds">
-      <label for="hatethem">Hate them</label>
-        <input type="radio" value="likethem" name="crowds">
-      <label for="likethem">Like them</label>
-    <br>
-    <button type="submit">Find my vacation!</button>
+      <button type="submit" id="findvacation">Find my vacation!</button>
     </form>
     <div>
       <ul id="vacationresults">
@@ -86,6 +142,7 @@
       hustle and bustle of the modern world. The prices might break the bank but will make up
       for it with it's peaceful tranquility. With a tiny population and ample opportunities
       for eco tourism, you will not be disappointed with your nordic adventure.</p>
+    </div>
     </div>
   </body>
 </html>
