@@ -29,7 +29,7 @@ Country.prototype.vacationmatch = function () {
   var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>We suggest you visit India!</a>";
   var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>We suggest you visit Mexico!</a>";
   var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>We suggest you visit Singapore!</a>";
-  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>We suggest you visitEgypt!</a>";
+  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>We suggest you visit Egypt!</a>";
   var allCountries = [];
 
   if (this.season === "summer") {
