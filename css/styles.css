@@ -2,7 +2,7 @@ body {
   text-align: center;
 }
 
-#mexicoDiv {
+/*#mexicoDiv {
   display: none;
 }
 
@@ -20,7 +20,7 @@ body {
 
 #icelandDiv {
   display: none;
-}
+}*/
 
 #topimg{
   width: 100%;
@@ -58,4 +58,10 @@ body {
 
 .label-text {
   font-size: 35px;
+
+}
+
+.country-pictures {
+  height: 400px;
+  width: 800px;
 }
