@@ -25,11 +25,11 @@ var countries = [
 ];
 
 Country.prototype.vacationmatch = function () {
-  icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>You're going to Iceland!</a>";
-  var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>You're going to India!</a>";
-  var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>You're going to Mexico!</a>";
-  var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>You're going to Singapore!</a>";
-  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>You're going to Egypt!</a>";
+  icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>We suggest you visit Iceland!</a>";
+  var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>We suggest you visit India!</a>";
+  var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>We suggest you visit Mexico!</a>";
+  var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>We suggest you visit Singapore!</a>";
+  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>We suggest you visit Egypt!</a>";
   var allCountries = [];
 
   if (this.season === "summer") {
@@ -120,13 +120,14 @@ $(document).ready(function(){
     var userEnv = $("input[name=city]:checked").val();
     var userHist = $("input[name=modern]:checked").val();
     var userCrowds = $("input[name=crowds]:checked").val();
+    var firstname = $("#first-name").val();
 
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
 
     myCountry.vacationmatch();
     for (var i=0; i < yourResults.length; i++) {
-      $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
+      $("#vacationresults").append("<p>" + firstname + " " + yourResults[i] + "</p>");
     };
   });
   $(".backButton").click(function(){
