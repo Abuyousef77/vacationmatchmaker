@@ -5,7 +5,7 @@ var mexico = 0;
 var singapore = 0;
 var egypt = 0;
 var yourResults = [];
-var icelandText;
+var highScore = 0;
 
 //objects
 function Country (season, cost, environment, history, crowd){
@@ -25,11 +25,11 @@ var countries = [
 ];
 
 Country.prototype.vacationmatch = function () {
-  icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>We suggest you visit Iceland!</a>";
-  var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>We suggest you visit India!</a>";
-  var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>We suggest you visit Mexico!</a>";
-  var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>We suggest you visit Singapore!</a>";
-  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>We suggest you visit Egypt!</a>";
+  var icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>You're going to Iceland!</a>";
+  var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>You're going to India!</a>";
+  var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>You're going to Mexico!</a>";
+  var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>You're going to Singapore!</a>";
+  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>You're going to Egypt!</a>";
   var allCountries = [];
 
   if (this.season === "summer") {
@@ -111,6 +111,7 @@ Country.prototype.vacationmatch = function () {
   console.log("your results are" + yourResults);
 };
 
+
 //user interface
 $(document).ready(function(){
   var zebra = $("#questions").submit(function(event) {
@@ -124,14 +125,26 @@ $(document).ready(function(){
 
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
-
     myCountry.vacationmatch();
-    for (var i=0; i < yourResults.length; i++) {
-      $("#vacationresults").append("<p>" + firstname + " " + yourResults[i] + "</p>");
-    };
-  });
-  $(".backButton").click(function(){
-  history.back(".backButton");
-  zebra.submit();
+
+    if (highScore === iceland) {
+      $('#icelandDiv').show();
+    }
+    if (highScore === singapore) {
+      $('#singaporeDiv').show();
+    }
+    if (highScore === india) {
+      $('#indiaDiv').show();
+    }
+    if (highScore === egypt) {
+      $('#egyptDiv').show();
+    }
+    if (highScore === mexico) {
+      $('#mexicoDiv').show();
+    }
+
+    // for (var i=0; i < yourResults.length; i++) {
+    //   $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
+    // };
   });
 });
