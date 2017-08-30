@@ -44,23 +44,23 @@ Country.prototype.vacationmatch = function () {
   }
 
   if (this.cost === "splurge") {
-    iceland += 1;
-    singapore += 1;
+    iceland += 2;
+    singapore += 2;
   } else if (this.cost === "budget") {
-    india += 1;
-    egypt += 1;
+    india += 2;
+    egypt += 2;
   } else if (this.cost === "average") {
     mexico += 1;
   }
 
   if (this.environment === "nature") {
-    iceland += 1;
+    iceland += 3;
   } else if (this.environment === "mix") {
-    india += 1;
+    india += 2;
     mexico += 1;
   } else if (this.environment === "city") {
-    egypt += 1;
-    singapore += 1;
+    egypt += 3;
+    singapore += 3;
   }
 
   if (this.history === "modern") {
@@ -73,13 +73,13 @@ Country.prototype.vacationmatch = function () {
   }
 
   if (this.crowd === "hate-them"){
-    iceland += 1;
+    iceland += 5;
   } else if (this.crowd === "indifferent") {
     mexico += 1;
     egypt += 1;
   } else if (this.crowd === "like-them") {
-    india += 1;
-    singapore += 1;
+    india += 5;
+    singapore += 5;
   }
   console.log("Iceland is" + iceland);
   console.log("India is" + india);

@@ -55,3 +55,7 @@ body {
 #widen {
   width: 220px;
 }
+
+.label-text {
+  font-size: 35px;
+}
