@@ -120,13 +120,14 @@ $(document).ready(function(){
     var userEnv = $("input[name=city]:checked").val();
     var userHist = $("input[name=modern]:checked").val();
     var userCrowds = $("input[name=crowds]:checked").val();
+    var firstname = $("#first-name").val();
 
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
 
     myCountry.vacationmatch();
     for (var i=0; i < yourResults.length; i++) {
-      $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
+      $("#vacationresults").append("<p>" + firstname + " " + yourResults[i] + "</p>");
     };
   });
   $(".backButton").click(function(){
