@@ -5,7 +5,6 @@ var mexico = 0;
 var singapore = 0;
 var egypt = 0;
 var yourResults = [];
-var highScore = 0;
 
 //objects
 function Country (season, cost, environment, history, crowd){
@@ -25,20 +24,12 @@ var countries = [
 ];
 
 Country.prototype.vacationmatch = function () {
-<<<<<<< HEAD
-  icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>We suggest you visit Iceland!</a>";
-  var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>We suggest you visit India!</a>";
-  var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>We suggest you visit Mexico!</a>";
-  var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>We suggest you visit Singapore!</a>";
-  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>We suggest you visit Egypt!</a>";
-=======
-  var icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>You're going to Iceland!</a>";
-  var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>You're going to India!</a>";
-  var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>You're going to Mexico!</a>";
-  var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>You're going to Singapore!</a>";
-  var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>You're going to Egypt!</a>";
->>>>>>> buttons
-  var allCountries = [];
+  //
+  // var icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>You're going to Iceland!</a>";
+  // var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>You're going to India!</a>";
+  // var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>You're going to Mexico!</a>";
+  // var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>You're going to Singapore!</a>";
+  // var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>You're going to Egypt!</a>";
 
   if (this.season === "summer") {
     iceland += 1;
@@ -95,34 +86,13 @@ Country.prototype.vacationmatch = function () {
   console.log("Mexico is" + mexico);
   console.log("Singapore is" + singapore);
 
-  allCountries.push(iceland, india, egypt, mexico, singapore);
-  console.log(allCountries);
-  var highScore = Math.max.apply(null, allCountries);
-  console.log("high score is" + highScore);
-
-
-  if (highScore === iceland) {
-    yourResults.push(icelandText);
-  }
-  if (highScore === singapore) {
-    yourResults.push(singaporeText);
-  }
-  if (highScore === india) {
-    yourResults.push(indiaText);
-  }
-  if (highScore === mexico) {
-    yourResults.push(mexicoText);
-  }
-  if (highScore === egypt) {
-    yourResults.push(egyptText);
-  }
+  yourResults.push(iceland, india, egypt, mexico, singapore);
   console.log("your results are" + yourResults);
 };
 
-
 //user interface
 $(document).ready(function(){
-  var zebra = $("#questions").submit(function(event) {
+  $("#questions").submit(function(event) {
     event.preventDefault();
     var userSeason = $("input[name=season]:checked").val();
     var userCost = $("input[name=money]:checked").val();
@@ -134,6 +104,7 @@ $(document).ready(function(){
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
     myCountry.vacationmatch();
+    var highScore = Math.max.apply(null, yourResults);
 
     if (highScore === iceland) {
       $('#icelandDiv').show();
@@ -150,8 +121,6 @@ $(document).ready(function(){
     if (highScore === mexico) {
       $('#mexicoDiv').show();
     }
-
-    // for (var i=0; i < yourResults.length; i++) {
     //   $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
     // };
   });
