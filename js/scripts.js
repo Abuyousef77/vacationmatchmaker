@@ -46,10 +46,10 @@ Country.prototype.vacationmatch = function () {
   if (this.cost === "splurge") {
     iceland += 1;
     singapore += 1;
-  } else if (this.season === "budget") {
+  } else if (this.cost === "budget") {
     india += 1;
     egypt += 1;
-  } else if (this.season === "average") {
+  } else if (this.cost === "average") {
     mexico += 1;
   }
 
@@ -113,7 +113,7 @@ Country.prototype.vacationmatch = function () {
 
 //user interface
 $(document).ready(function(){
-  $("#questions").submit(function(event) {
+  var zebra = $("#questions").submit(function(event) {
     event.preventDefault();
     var userSeason = $("input[name=season]:checked").val();
     var userCost = $("input[name=money]:checked").val();
@@ -123,9 +123,14 @@ $(document).ready(function(){
 
     var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
 
+
     myCountry.vacationmatch();
     for (var i=0; i < yourResults.length; i++) {
-      $("#vacationresults").append("<li>" + yourResults[i] + "</li>");
+      $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
     };
+  });
+  $(".backButton").click(function(){
+  history.back(".backButton");
+  zebra.submit();
   });
 });
