@@ -32,23 +32,13 @@ function nextName() {
   $("#findvacation").fadeIn(2000);
 }
 
-//objects
-function Country (season, cost, environment, history, crowd, name){
+function Country (season, cost, environment, history, crowd) {
   this.season = season;
   this.cost = cost;
   this.environment = environment;
   this.crowd = crowd;
   this.history = history;
-  this.name = name;
 }
-
-var countries = [
-  new Country ("summer", "splurge", "nature", "modern", "hate-them"), //iceland
-  new Country ("winter", "budget", "mix", "historic", "like-them"), //india
-  new Country ("fall", "average", "mix", "historic", "indifferent"), //mexico
-  new Country ("spring", "splurge", "city", "modern", "like-them"), //singapore
-  new Country ("winter", "budget", "city", "historic", "indifferent"), //egypt
-];
 
 Country.prototype.vacationmatch = function () {
   if (this.season === "summer") {
@@ -100,20 +90,9 @@ Country.prototype.vacationmatch = function () {
     india += 5;
     singapore += 5;
   }
-  console.log("Iceland is" + iceland);
-  console.log("India is" + india);
-  console.log("Egypt is" + egypt);
-  console.log("Mexico is" + mexico);
-  console.log("Singapore is" + singapore);
 
   yourResults.push(iceland, india, egypt, mexico, singapore);
-  console.log("your results are" + yourResults);
 };
-
-//functionality for hiding the radio buttons
-// Country.prototype.hide = function() {
-//
-// }
 
 //user interface
 $(document).ready(function(){
