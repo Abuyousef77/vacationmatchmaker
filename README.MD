@@ -1,6 +1,6 @@
 # _Vacation Matchmaker_
 
-#### _Find out which country is the best for you to travel to, 08.31.2017_
+#### _Find out which country is best for you to travel to, 08.31.2017_
 
 #### By _**Benjamin Bressler, Sean Slingerland, Margaret Berry and Rebecca McIntosh.**_
 
