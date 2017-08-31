@@ -7,7 +7,7 @@ var egypt = 0;
 var yourResults = [];
 
 //objects
-function Country (season, cost, environment, history, crowd){
+function Country (season, cost, environment, history, crowd, name){
   this.season = season;
   this.cost = cost;
   this.environment = environment;
@@ -24,13 +24,6 @@ var countries = [
 ];
 
 Country.prototype.vacationmatch = function () {
-  //
-  // var icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>You're going to Iceland!</a>";
-  // var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>You're going to India!</a>";
-  // var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>You're going to Mexico!</a>";
-  // var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>You're going to Singapore!</a>";
-  // var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>You're going to Egypt!</a>";
-
   if (this.season === "summer") {
     iceland += 1;
   } else if (this.season === "winter") {
@@ -90,6 +83,8 @@ Country.prototype.vacationmatch = function () {
   console.log("your results are" + yourResults);
 };
 
+//functionality for hiding the radio buttons
+
 //user interface
 $(document).ready(function(){
   $("#questions").submit(function(event) {
@@ -133,14 +128,6 @@ $(document).ready(function(){
     }
     $(".backButton").click(function() {
       location.reload("#questions");
-      // $("#questions").show();
-      // $('#icelandDiv').hide();
-      // $('#singaporeDiv').hide();
-      // $('#indiaDiv').hide();
-      // $('#egyptDiv').hide();
-      // $('#mexicoDiv').hide();
     });
-    //   $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
-    // };
   });
 });
