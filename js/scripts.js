@@ -7,7 +7,7 @@ var egypt = 0;
 var yourResults = [];
 
 //objects
-function Country (season, cost, environment, history, crowd){
+function Country (season, cost, environment, history, crowd, name){
   this.season = season;
   this.cost = cost;
   this.environment = environment;
@@ -24,13 +24,6 @@ var countries = [
 ];
 
 Country.prototype.vacationmatch = function () {
-  //
-  // var icelandText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/iceland.html'>You're going to Iceland!</a>";
-  // var indiaText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/india.html'>You're going to India!</a>";
-  // var mexicoText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/mexico.html'>You're going to Mexico!</a>";
-  // var singaporeText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/singapore.html'>You're going to Singapore!</a>";
-  // var egyptText = "<a href='file:///Users/Guest/Desktop/vacationmatchmaker/egypt.html'>You're going to Egypt!</a>";
-
   if (this.season === "summer") {
     iceland += 1;
   } else if (this.season === "winter") {
@@ -90,6 +83,8 @@ Country.prototype.vacationmatch = function () {
   console.log("your results are" + yourResults);
 };
 
+//functionality for hiding the radio buttons
+
 //user interface
 $(document).ready(function(){
   $("#questions").submit(function(event) {
@@ -107,21 +102,32 @@ $(document).ready(function(){
     var highScore = Math.max.apply(null, yourResults);
 
     if (highScore === iceland) {
+      $("#questions").hide();
       $('#icelandDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === singapore) {
+      $("#questions").hide();
       $('#singaporeDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === india) {
+      $("#questions").hide();
       $('#indiaDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === egypt) {
+      $("#questions").hide();
       $('#egyptDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === mexico) {
+      $("#questions").hide();
       $('#mexicoDiv').show();
+      $(".personal").text(firstname);
     }
-    //   $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
-    // };
+    $(".backButton").click(function() {
+      location.reload("#questions");
+    });
   });
 });
