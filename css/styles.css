@@ -37,8 +37,8 @@ body {
 .text {
   position: absolute;
   text-align: center;
-  top: 3px;
-  left: 0;
+  top: 40px;
+  left: 40px;
   font-size: 150px;
   color: #e6cac1;
   font-family: cursive;
@@ -57,7 +57,8 @@ body {
 }
 
 .label-text {
-  font-size: 35px;
+  font-size: 45px;
+  font-family: Apple Chancery, cursive;
 }
 
 .country-pictures {
