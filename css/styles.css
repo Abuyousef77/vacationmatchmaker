@@ -65,3 +65,7 @@ body {
   height: 400px;
   width: 800px;
 }
+
+#nameShow, #costsShow, #cityShow, #historyShow, #crowdsShow, #findvacation {
+  display: none;
+}

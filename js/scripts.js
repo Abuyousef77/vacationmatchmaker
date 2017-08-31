@@ -6,6 +6,32 @@ var singapore = 0;
 var egypt = 0;
 var yourResults = [];
 
+function nextCost() {
+  $("#seasonsShow").hide();
+  $("#costsShow").fadeIn(2000);
+}
+
+function nextCity() {
+  $("#costsShow").hide();
+  $("#cityShow").fadeIn(2000);
+}
+
+function nextHistory() {
+  $("#cityShow").hide();
+  $("#historyShow").fadeIn(2000);
+}
+
+function nextCrowds() {
+  $("#historyShow").hide();
+  $("#crowdsShow").fadeIn(2000);
+}
+
+function nextName() {
+  $("#crowdsShow").hide();
+  $("#nameShow").fadeIn(2000);
+  $("#findvacation").fadeIn(2000);
+}
+
 //objects
 function Country (season, cost, environment, history, crowd, name){
   this.season = season;
@@ -13,6 +39,7 @@ function Country (season, cost, environment, history, crowd, name){
   this.environment = environment;
   this.crowd = crowd;
   this.history = history;
+  this.name = name;
 }
 
 var countries = [
@@ -84,6 +111,9 @@ Country.prototype.vacationmatch = function () {
 };
 
 //functionality for hiding the radio buttons
+// Country.prototype.hide = function() {
+//
+// }
 
 //user interface
 $(document).ready(function(){
@@ -96,7 +126,7 @@ $(document).ready(function(){
     var userCrowds = $("input[name=crowds]:checked").val();
     var firstname = $("#first-name").val();
 
-    var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds);
+    var myCountry = new Country (userSeason, userCost, userEnv, userHist, userCrowds, firstname);
 
     myCountry.vacationmatch();
     var highScore = Math.max.apply(null, yourResults);
