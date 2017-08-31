@@ -107,20 +107,39 @@ $(document).ready(function(){
     var highScore = Math.max.apply(null, yourResults);
 
     if (highScore === iceland) {
+      $("#questions").hide();
       $('#icelandDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === singapore) {
+      $("#questions").hide();
       $('#singaporeDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === india) {
+      $("#questions").hide();
       $('#indiaDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === egypt) {
+      $("#questions").hide();
       $('#egyptDiv').show();
+      $(".personal").text(firstname);
     }
     if (highScore === mexico) {
+      $("#questions").hide();
       $('#mexicoDiv').show();
+      $(".personal").text(firstname);
     }
+    $(".backButton").click(function() {
+      location.reload("#questions");
+      // $("#questions").show();
+      // $('#icelandDiv').hide();
+      // $('#singaporeDiv').hide();
+      // $('#indiaDiv').hide();
+      // $('#egyptDiv').hide();
+      // $('#mexicoDiv').hide();
+    });
     //   $("#vacationresults").append("<p>" + yourResults[i] + "</p>");
     // };
   });
